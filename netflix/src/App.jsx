@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-
-
+import './index.css'
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -157,77 +156,6 @@ export default App
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useEffect, useState } from 'react'
-// import axios from 'axios';
-
-// function App() {
-//   const [movies, setMovies] = useState([])
-//   const [genres, setGenresList] = useState([])
-//   const url = 'https://image.tmdb.org/t/p/original'
-//   useEffect(() => {
-//     async function fetchData() {
-//       const result = await axios.get("https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=d304399c886fb0207327e7e5b300f91a")
-//       console.log(result.data)
-//       setMovies(result.data.results)
-//     }
-//     fetchData();
-
-//     async function getGenreList() {
-
-//       const response2 = await axios.get(
-//         "https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=d304399c886fb0207327e7e5b300f91a"
-//       );
-//       console.log(response2.data.genres);
-//       setGenresList(response2.data.genres);
-//     }
-//     getGenreList();
-//   }, []);
-
-
-//   return (
-//     <div className='main' >
-//       <div className="sidebar">
-//        <h1>genre</h1>
-//         <ul>
-//           {
-//             genres.map((genre, index) => {
-//               return <li key={index}>
-//                 <a href={"/genre/" + genre.id}>{genre.name}</a>
-//               </li>
-//             })
-//           }
-//         </ul>
-//       </div>
-//       {
-        
-//         movies.map((movie, index) => {
-//           return (
-//             <div className='show' key={index}>
-//               <img src={url + movie.poster_path} alt="" />
-//               <h3>{movie.title}</h3>
-//             </div>
-//           )
-//         })
-//       }
-
-//     </div>
-
-//   )
-// }
-
-// export default App;
 
 
 
